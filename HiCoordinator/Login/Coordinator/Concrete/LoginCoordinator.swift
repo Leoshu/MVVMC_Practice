@@ -12,7 +12,7 @@ class LoginCoordinator: LoginCoordinatorProtocol {
     //這屬性一定要weak避免循環引用
     weak var navi: UINavigationController?
     var completionHandler: Callback?
-    var completion: Voidback?
+    var backFromMain: Voidback?
     
     func presentToMain() {
         let interactore = MainInteractor()
@@ -20,7 +20,7 @@ class LoginCoordinator: LoginCoordinatorProtocol {
         let mainVM = MainViewModel(interactor: interactore, coordinator: coordinator)
         let mainVC = MainViewController.instantiate(with: mainVM)
         coordinator.navi = navi
-        coordinator.backFromMain = completion
+        coordinator.backFromMain = backFromMain
         //使用present另開一個新流程
         navi?.present(mainVC, animated: true, completion: nil)
     }

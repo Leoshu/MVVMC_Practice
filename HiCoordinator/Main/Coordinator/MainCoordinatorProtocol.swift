@@ -11,5 +11,5 @@ import UIKit
 protocol MainCoordinatorProtocol: class {
     var navi: UINavigationController? {get set}
     func userLogout()
-    var backFromMain: (() -> ())? {get set}
+    var backFromMain: Voidback? {get set}
 }

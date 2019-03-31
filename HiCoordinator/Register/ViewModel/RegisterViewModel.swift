@@ -19,6 +19,7 @@ class RegisterViewModel: NSObject {
     }
     
     func dissmiss() {
+        //傳送註冊者名字
         coordinator.completionHandler?(inputUserName)
         coordinator.dismiss()
     }

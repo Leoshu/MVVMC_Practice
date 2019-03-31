@@ -14,7 +14,7 @@ typealias Voidback = () -> Void
 protocol LoginCoordinatorProtocol: class {
     var navi: UINavigationController? {get set}
     func presentToMain()
-    var completion: Voidback? {get set}
+    var backFromMain: Voidback? {get set}
     
     func presentToRegister()
     var completionHandler: Callback? {get set}

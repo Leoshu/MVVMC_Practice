@@ -29,7 +29,7 @@ class LoginViewModel: NSObject {
     func presentMain() {
         CacheManager.save(value: userName, key: KEY_USER_NAME)
         //用來取得Main page logout的事件
-        coordinator.completion = { [unowned self]  () in
+        coordinator.backFromMain = { [unowned self]  () in
             self.userName = nil
         }
         coordinator.presentToMain()

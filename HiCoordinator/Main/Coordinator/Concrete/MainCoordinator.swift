@@ -10,7 +10,7 @@ import UIKit
 
 class MainCoordinator: MainCoordinatorProtocol {
     weak var navi: UINavigationController?
-    var backFromMain: (() -> ())?
+    var backFromMain: Voidback?
     
     func userLogout() {
         navi?.dismiss(animated: true, completion: nil)
